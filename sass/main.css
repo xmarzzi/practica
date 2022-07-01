@@ -1,0 +1,186 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.inicio .presentacion {
+  max-width: 60%;
+}
+.inicio .presentacion .card-title {
+  color: #1e272e;
+}
+.inicio .presentacion .card-text {
+  color: #3d3d3d;
+}
+
+.pasosCompra {
+  margin: auto;
+  max-width: 60%;
+}
+
+.contenido .containerNovedades {
+  background-image: url(../img/fondoNovedades.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 100px 150px rgba(0, 0, 0, 0.3);
+  display: block;
+  color: #f3f3f3;
+  align-items: center;
+}
+.contenido h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+}
+.contenido h2 {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+}
+.contenido .cartelNeon {
+  -webkit-animation: neon 2s infinite alternate;
+          animation: neon 2s infinite alternate;
+}
+.contenido .novedadesVinos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 100px 25px;
+}
+
+/* ANIMACIÓN */
+@-webkit-keyframes neon {
+  0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
+    text-shadow: 0 0 25px #3485ff, 0 0 35px #00246c, 0 0 30px #00246c, 0 0 50px #3485ff;
+  }
+  10%, 15%, 60% {
+    text-shadow: none;
+  }
+}
+@keyframes neon {
+  0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
+    text-shadow: 0 0 25px #3485ff, 0 0 35px #00246c, 0 0 30px #00246c, 0 0 50px #3485ff;
+  }
+  10%, 15%, 60% {
+    text-shadow: none;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .navbar-brand {
+    margin: 0 auto 10px;
+  }
+  .header .container .nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    margin: 15px auto;
+  }
+  .footer .navbar-brand {
+    margin: 0 auto;
+  }
+  .footer .footerRedes {
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .inicio .presentacion {
+    display: contents;
+  }
+  .inicio .newsletter .card {
+    margin: 5%;
+  }
+  .inicio .newsletter .card-body {
+    margin: 5px 10px;
+    padding: 5px;
+  }
+
+  .contenido .novedadesVinos {
+    margin: 20% 25px 100px 25px;
+  }
+  .contenido .novedadesVinos img {
+    width: 50%;
+    height: auto;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .navbar-brand {
+    margin: 0 auto 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    margin: 15px auto;
+  }
+  .footer .navbar-brand {
+    margin: 0 auto;
+  }
+  .footer .footerRedes {
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .inicio .newsletter .card {
+    margin: 10%;
+  }
+  .inicio .newsletter .card-body {
+    margin: 10% 20%;
+  }
+
+  .presentacion {
+    display: contents;
+  }
+
+  .pasosCompra {
+    width: 80%;
+  }
+}
+@media (max-width: 1200px) {
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .inicio .newsletter .card {
+    margin: 10%;
+    box-shadow: 0 0 25px #3485ff, 0 0 35px #cc8e35, 0 0 30px #cc8e35, 0 0 50px #3485ff;
+  }
+  .inicio .newsletter .card-body {
+    margin: 10% 20%;
+  }
+
+  .presentacion {
+    display: contents;
+  }
+
+  .pasosCompra {
+    width: 60%;
+  }
+}/*# sourceMappingURL=main.css.map */

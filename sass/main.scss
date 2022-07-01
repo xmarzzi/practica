@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import 'vars';
+@import 'index';
+
+
+@media (max-width: $mobile){
+    .header{
+        display: flex;
+        flex-direction: column;
+        & .navbar-brand{
+            margin: 0 auto 10px;
+        }
+        & .container .nav{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .footer{
+        flex-direction: column;
+        margin: 15px auto;
+            & .navbar-brand{
+                margin: 0 auto;
+            }
+            & .footerRedes{
+                margin: auto;
+                justify-content: space-around;
+            }
+        
+    }
+
+    .inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & .presentacion{
+            display: contents;
+        }
+        & .newsletter .card{
+            margin: 5%;
+        }
+        & .newsletter .card-body{
+            margin: 5px 10px;
+            padding: 5px;
+        }
+    }
+
+    .contenido{
+        & .novedadesVinos{
+        margin: 20% 25px 100px 25px;
+        
+            img{
+                width: 50%;
+                height:auto;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    
+    .header{
+        display: flex;
+        flex-direction: column;
+        & .navbar-brand{
+            margin: 0 auto 10px;
+        }
+     
+    }
+
+    .footer{
+        flex-direction: column;
+        margin: 15px auto;
+            & .navbar-brand{
+                margin: 0 auto;
+            }
+            & .footerRedes{
+                margin: auto;
+                justify-content: space-around;
+            }
+        
+    }
+
+    .inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     
+        & .newsletter {
+            .card{
+                margin: 10%;
+            }
+            .card-body{
+                margin: 10% 20%;
+            }
+        }
+    }
+    .presentacion {
+        display: contents;
+     
+     }
+    .pasosCompra{
+        width: 80%;
+    }    
+
+}
+
+@media (max-width: $desktop) {
+    .inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     
+        & .newsletter {
+            .card{
+                margin: 10%;
+               box-shadow: 
+                    0 0 25px #3485ff,
+                    0 0 35px #cc8e35, 
+                    0 0 30px #cc8e35, 
+                    0 0 50px #3485ff;  
+            }
+            .card-body{
+                margin: 10% 20%;
+            }
+        }
+    }
+    .presentacion {
+        display: contents;
+     
+     }
+    .pasosCompra{
+        width: 60%;
+    }    
+
+
+}
