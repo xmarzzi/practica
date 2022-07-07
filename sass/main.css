@@ -71,6 +71,7 @@
     text-shadow: none;
   }
 }
+/* A TODAS LAS PÁGINAS DEL SITIO */
 @media (max-width: 576px) {
   .header {
     display: flex;
@@ -95,7 +96,30 @@
     margin: auto;
     justify-content: space-around;
   }
+}
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .navbar-brand {
+    margin: 0 auto 10px;
+  }
 
+  .footer {
+    flex-direction: column;
+    margin: 15px auto;
+  }
+  .footer .navbar-brand {
+    margin: 0 auto;
+  }
+  .footer .footerRedes {
+    margin: auto;
+    justify-content: space-around;
+  }
+}
+/* INICIO */
+@media (max-width: 576px) {
   .inicio {
     display: flex;
     flex-direction: column;
@@ -122,26 +146,6 @@
   }
 }
 @media (max-width: 768px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-  }
-  .header .navbar-brand {
-    margin: 0 auto 10px;
-  }
-
-  .footer {
-    flex-direction: column;
-    margin: 15px auto;
-  }
-  .footer .navbar-brand {
-    margin: 0 auto;
-  }
-  .footer .footerRedes {
-    margin: auto;
-    justify-content: space-around;
-  }
-
   .inicio {
     display: flex;
     flex-direction: column;
@@ -182,5 +186,29 @@
 
   .pasosCompra {
     width: 60%;
+  }
+}
+/* CONTACTO */
+#contacto {
+  background-image: url(../img/contactoFondo.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+#contacto .formularioContacto {
+  display: flex;
+  justify-content: center;
+  padding: 15%;
+}
+#contacto .formularioContacto form div {
+  padding: 3px;
+  background-color: rgba(247, 244, 242, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+}
+
+@media (max-width: 1200px) {
+  .formularioContacto form div input {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -6,8 +6,9 @@
 @import 'vars';
 @import 'index';
 
+/* A TODAS LAS PÁGINAS DEL SITIO */
 
-@media (max-width: $mobile){
+@media (max-width:$mobile){
     .header{
         display: flex;
         flex-direction: column;
@@ -32,7 +33,37 @@
             }
         
     }
+}
 
+@media (max-width:$tablet){
+    .header{
+        display: flex;
+        flex-direction: column;
+        & .navbar-brand{
+            margin: 0 auto 10px;
+        }
+     
+    }
+
+    .footer{
+        flex-direction: column;
+        margin: 15px auto;
+            & .navbar-brand{
+                margin: 0 auto;
+            }
+            & .footerRedes{
+                margin: auto;
+                justify-content: space-around;
+            }
+        
+    }
+
+}
+
+
+/* INICIO */
+
+@media (max-width: $mobile){
     .inicio{
         display: flex;
         flex-direction: column;
@@ -63,29 +94,6 @@
 }
 
 @media (max-width: $tablet) {
-    
-    .header{
-        display: flex;
-        flex-direction: column;
-        & .navbar-brand{
-            margin: 0 auto 10px;
-        }
-     
-    }
-
-    .footer{
-        flex-direction: column;
-        margin: 15px auto;
-            & .navbar-brand{
-                margin: 0 auto;
-            }
-            & .footerRedes{
-                margin: auto;
-                justify-content: space-around;
-            }
-        
-    }
-
     .inicio{
         display: flex;
         flex-direction: column;
@@ -137,6 +145,31 @@
     .pasosCompra{
         width: 60%;
     }    
+}
 
+/* CONTACTO */
+
+#contacto{
+    background-image: url(../img/contactoFondo.jpg);
+    background-size: cover;
+    height: 100vh;
+    .formularioContacto{
+        display: flex;
+        justify-content: center;
+        padding: 15%;
+        & form div{
+            padding: 3px;
+            background-color: rgb(247, 244, 242, 0.3);
+            display: flex;
+            flex-direction: column;
+            padding: 5px 15px;
+        }
+    }
+}
+
+@media (max-width:$desktop) {
+    .formularioContacto form div input{
+        width: 100%;
+    }
 
 }
