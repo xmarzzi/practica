@@ -1,3 +1,6 @@
+/* FONTS */
+/* font-family: 'Open Sans', sans-serif; */
+
 *{
     margin: 0;
     padding: 0;
@@ -62,13 +65,74 @@
 
 
 /* INICIO */
+.inicio .presentacion{
+    max-width: 60%;
+    & .card-title{
+        color: $titles;
+    }
+    & .card-text{
+        color: $paragraphs;
+    }
+ }
+.pasosCompra{
+    margin: auto;
+    max-width: 60%;
+}
+
+.contenido{
+    & .containerNovedades{
+        background-image: url(../img/fondoNovedades.jpg);
+        background: {
+            size: cover;
+            position: center;
+        }
+        box-shadow: inset 0 0 100px 150px rgba(0, 0, 0, .3);
+        display: block;
+        color: #f3f3f3;
+        align-items: center;
+    }
+
+    & h1{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    & h2{
+        margin: 20px auto;
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    & .cartelNeon{
+        animation: neon 2s infinite alternate;
+    }
+    & .novedadesVinos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 100px 25px;
+    }
+}
+
+/* ANIMACIÓN */
+@keyframes neon {
+    0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100%{
+       text-shadow: 0 0 25px #3485ff,
+                    0 0 35px #00246c, 
+                    0 0 30px #00246c, 
+                    0 0 50px #3485ff; 
+    }
+    10%, 15%, 60%{
+       text-shadow: none;
+    }
+  } 
 
 @media (max-width: $mobile){
-    .inicio{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        & .presentacion{
+    main{
+         .presentacion{
             display: contents;
         }
         & .newsletter .card{
@@ -94,12 +158,8 @@
 }
 
 @media (max-width: $tablet) {
-    .inicio{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-     
-        & .newsletter {
+    main{
+     .newsletter {
             .card{
                 margin: 10%;
             }
@@ -119,12 +179,8 @@
 }
 
 @media (max-width: $desktop) {
-    .inicio{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-     
-        & .newsletter {
+    main{
+         .newsletter {
             .card{
                 margin: 10%;
                box-shadow: 
@@ -146,6 +202,22 @@
         width: 60%;
     }    
 }
+
+/* SECCIÓN INFO COMPRAS */
+
+/* MIXINS */
+
+@mixin headers-title{
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 10px 20px 25px #00246c;
+    text-align: center;
+}
+
+.title{
+    @include headers-title;
+}
+
 
 /* CONTACTO */
 
