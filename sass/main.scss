@@ -48,6 +48,10 @@ $estilos-titulos: (
 }
 
 /* A TODAS LAS PÁGINAS DEL SITIO */
+h1{
+    text-align: center;
+    margin: 15px, 0;
+ }
 
 @media (max-width:$mobile){
     .header{
@@ -103,6 +107,8 @@ $estilos-titulos: (
 
 
 /* INICIO */
+
+
 
 .inicio .presentacion{
     max-width: 60%;

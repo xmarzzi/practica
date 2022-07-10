@@ -28,6 +28,11 @@
 }
 
 /* A TODAS LAS PÁGINAS DEL SITIO */
+h1 {
+  text-align: center;
+  margin: 15px, 0;
+}
+
 @media (max-width: 576px) {
   .header {
     display: flex;
@@ -40,7 +45,6 @@
     display: flex;
     justify-content: center;
   }
-
   .footer {
     flex-direction: column;
     margin: 15px auto;
@@ -61,7 +65,6 @@
   .header .navbar-brand {
     margin: 0 auto 10px;
   }
-
   .footer {
     flex-direction: column;
     margin: 15px auto;
@@ -153,7 +156,6 @@
     margin: 5px 10px;
     padding: 5px;
   }
-
   .contenido .novedadesVinos {
     margin: 20% 25px 100px 25px;
   }
@@ -175,11 +177,9 @@
   .inicio .newsletter .card-body {
     margin: 10% 20%;
   }
-
   .presentacion {
     display: contents;
   }
-
   .pasosCompra {
     width: 80%;
   }
@@ -197,11 +197,9 @@
   .inicio .newsletter .card-body {
     margin: 10% 20%;
   }
-
   .presentacion {
     display: contents;
   }
-
   .pasosCompra {
     width: 60%;
   }
