@@ -1,68 +1,32 @@
 @charset "UTF-8";
+/* FONTS 
+ font-family: 'Open Sans', sans-serif; 
+ font-family: 'Finlandica', sans-serif; */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.inicio .presentacion {
-  max-width: 60%;
+/* VARIABLES */
+/* MAPS */
+.style-titulo {
+  color: #2f3542;
 }
-.inicio .presentacion .card-title {
-  color: #1e272e;
+
+.style-subtitulo {
+  color: #57606f;
 }
-.inicio .presentacion .card-text {
+
+/* MIXINS */
+/* EXTEND */
+.paragraphs, .container p, .inicio .presentacion .card-text {
+  font-family: "Finlandica", sans-serif;
+  font-size: 24px;
   color: #3d3d3d;
+  text-justify: inter-ideograph;
 }
 
-.pasosCompra {
-  margin: auto;
-  max-width: 60%;
-}
-
-.contenido .containerNovedades {
-  background-image: url(../img/fondoNovedades.jpg);
-  background-size: cover;
-  background-position: center;
-  box-shadow: inset 0 0 100px 150px rgba(0, 0, 0, 0.3);
-  display: block;
-  color: #f3f3f3;
-  align-items: center;
-}
-.contenido h1 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 50px;
-  font-family: "Times New Roman", Times, serif;
-}
-.contenido h2 {
-  margin: 20px auto;
-  text-align: center;
-  font-size: 40px;
-  font-family: "Times New Roman", Times, serif;
-}
-.contenido .cartelNeon {
-  -webkit-animation: neon 2s infinite alternate;
-          animation: neon 2s infinite alternate;
-}
-.contenido .novedadesVinos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 100px 25px;
-}
-
-/* ANIMACIÓN */
-@keyframes neon {
-  0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
-    text-shadow: 0 0 25px #3485ff, 0 0 35px #00246c, 0 0 30px #00246c, 0 0 50px #3485ff;
-  }
-  10%, 15%, 60% {
-    text-shadow: none;
-  }
-}
 /* A TODAS LAS PÁGINAS DEL SITIO */
 @media (max-width: 576px) {
   .header {
@@ -89,7 +53,7 @@
     justify-content: space-around;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -111,6 +75,68 @@
   }
 }
 /* INICIO */
+.inicio .presentacion {
+  max-width: 60%;
+}
+.inicio .presentacion .card-title {
+  color: #1e272e;
+}
+.pasosCompra {
+  margin: auto;
+  max-width: 60%;
+}
+
+.contenido .containerNovedades {
+  background-image: url(../img/fondoNovedades.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 100px 150px rgba(0, 0, 0, 0.3);
+  display: block;
+  color: #f3f3f3;
+  align-items: center;
+}
+.contenido h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Finlandica", sans-serif;
+}
+.contenido h2 {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Finlandica", sans-serif;
+}
+.contenido .cartelNeon {
+  -webkit-animation: neon 2s infinite alternate;
+          animation: neon 2s infinite alternate;
+}
+.contenido .novedadesVinos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 100px 25px;
+}
+
+/* ANIMACIÓN */
+@-webkit-keyframes neon {
+  0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
+    text-shadow: 0 0 25px #3485ff, 0 0 35px #00246c, 0 0 30px #00246c, 0 0 50px #3485ff;
+  }
+  10%, 15%, 60% {
+    text-shadow: none;
+  }
+}
+@keyframes neon {
+  0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
+    text-shadow: 0 0 25px #3485ff, 0 0 35px #00246c, 0 0 30px #00246c, 0 0 50px #3485ff;
+  }
+  10%, 15%, 60% {
+    text-shadow: none;
+  }
+}
 @media (max-width: 576px) {
   .inicio {
     display: flex;
@@ -137,7 +163,7 @@
     margin-top: 15px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .inicio {
     display: flex;
     flex-direction: column;
@@ -158,7 +184,7 @@
     width: 80%;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .inicio {
     display: flex;
     flex-direction: column;
@@ -180,6 +206,22 @@
     width: 60%;
   }
 }
+/* SECCIÓN INFO COMPRAS */
+.title {
+  font-size: 50px;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 8px 10px 20px #34495e;
+  text-align: center;
+  background-color: #E4DCCF;
+  color: #809A6F;
+  margin-bottom: 25px;
+}
+
+.container p {
+  margin-top: 5px;
+  padding: 15px;
+}
+
 /* CONTACTO */
 #contacto {
   background-image: url(../img/contactoFondo.jpg);
@@ -199,7 +241,7 @@
   padding: 5px 15px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .formularioContacto form div input {
     width: 100%;
   }

@@ -1,13 +1,51 @@
-/* FONTS */
-/* font-family: 'Open Sans', sans-serif; */
+/* FONTS 
+ font-family: 'Open Sans', sans-serif; 
+ font-family: 'Finlandica', sans-serif; */
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* VARIABLES */
 @import 'vars';
 @import 'index';
+
+/* MAPS */
+$titles-catalogo:(
+    titulo: #2f3542,
+    subtitulo:#57606f,
+);
+@each $nombre, $valor in $titles-catalogo {
+    .style-#{$nombre} {
+        color: $valor;
+    }
+    
+}
+
+$estilos-titulos: (
+    base: #E4DCCF,
+    principal: #809A6F,
+);
+/* MIXINS */
+
+@mixin headers-title{
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 8px 10px 20px #34495e;
+    text-align: center;
+    background-color: map-get($estilos-titulos, base);
+    color: map-get($estilos-titulos, principal );
+}
+
+/* EXTEND */
+.paragraphs{
+    font-family: 'Finlandica', sans-serif;
+    font-size: 24px;
+    color: #3d3d3d;
+    text-justify:inter-ideograph;
+}
 
 /* A TODAS LAS PÁGINAS DEL SITIO */
 
@@ -65,13 +103,14 @@
 
 
 /* INICIO */
+
 .inicio .presentacion{
     max-width: 60%;
     & .card-title{
         color: $titles;
     }
     & .card-text{
-        color: $paragraphs;
+        @extend .paragraphs;
     }
  }
 .pasosCompra{
@@ -97,13 +136,13 @@
         justify-content: center;
         text-align: center;
         font-size: 50px;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: 'Finlandica', sans-serif; 
     }
     & h2{
         margin: 20px auto;
         text-align: center;
         font-size: 40px;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: 'Finlandica', sans-serif;
     }
     & .cartelNeon{
         animation: neon 2s infinite alternate;
@@ -130,10 +169,15 @@
     }
   } 
 
+
 @media (max-width: $mobile){
-    main{
+    .inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
          .presentacion{
             display: contents;
+
         }
         & .newsletter .card{
             margin: 5%;
@@ -158,7 +202,10 @@
 }
 
 @media (max-width: $tablet) {
-    main{
+    .inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
      .newsletter {
             .card{
                 margin: 10%;
@@ -179,7 +226,10 @@
 }
 
 @media (max-width: $desktop) {
-    main{
+    .inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
          .newsletter {
             .card{
                 margin: 10%;
@@ -203,21 +253,22 @@
     }    
 }
 
+
 /* SECCIÓN INFO COMPRAS */
-
-/* MIXINS */
-
-@mixin headers-title{
-    font-size: 50px;
-    font-family: 'Open Sans', sans-serif;
-    box-shadow: 10px 20px 25px #00246c;
-    text-align: center;
-}
 
 .title{
     @include headers-title;
+    margin-bottom: 25px
+ 
 }
 
+.container{
+    p{
+        @extend .paragraphs;
+        margin-top: 5px;
+        padding: 15px;
+    }
+}
 
 /* CONTACTO */
 
